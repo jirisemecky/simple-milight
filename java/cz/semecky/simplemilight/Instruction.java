@@ -1,11 +1,15 @@
-package cz.semecky.milight;
+package cz.semecky.simplemilight;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 
-/** Single instruction of the command that can be sent to Milight bridge. */
+/**
+ * Single instruction of the command that can be sent to Milight bridge.
+ *
+ * @author Jiri Semecky (jiri.semecky@gmail.com)
+ */
 public class Instruction {
     private final byte[] data;
 

@@ -1,7 +1,10 @@
-package cz.semecky.milight;
+package cz.semecky.simplemilight;
 
 import java.io.IOException;
 
+/**
+ * This class is not core part of the Simple Mylight library, it only shows sample usage of it.
+ */
 public class Tester {
 
     private static final String ADDRESS = "192.168.0.101";

@@ -1,8 +1,10 @@
-package cz.semecky.milight;
+package cz.semecky.simplemilight;
 
 
 /**
  * Instruction set for the RGB+W LimitlessLED light bulbs.
+ *
+ * @author Jiri Semecky (jiri.semecky@gmail.com)
  */
 public class RGBW {
 

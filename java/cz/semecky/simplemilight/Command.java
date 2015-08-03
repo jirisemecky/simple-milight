@@ -1,4 +1,4 @@
-package cz.semecky.milight;
+package cz.semecky.simplemilight;
 
 import java.io.IOException;
 import java.net.InetAddress;
@@ -8,7 +8,9 @@ import java.util.List;
 /**
  * Commands for the Milight bridge to modify the state of Limitless LED bulbs.
  * Each command contains one or more instructions which are sent one by one.
-*/
+ *
+ * @author Jiri Semecky (jiri.semecky@gmail.com)
+ */
 class Command {
 
     private static final int DEFAULT_PORT = 8899;
