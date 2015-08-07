@@ -27,6 +27,8 @@ public class Tester {
         /* Fades in the brightness. */
         fadeIn();
 
+        RGBW.zone(1).color(RGBW.COLOR_ORANGE).send(ADDRESS);
+
         RGBW.all.off().send(ADDRESS);
 
         /* Scans addresses in the range of 192.168.0.100 - 192.168.0.200 (for searching for the bridge IP). */

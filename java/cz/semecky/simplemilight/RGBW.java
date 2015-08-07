@@ -51,6 +51,24 @@ public class RGBW {
         }
     }
 
+    // Color constants.
+    public static final byte COLOR_VIOLET = 0x00;
+    public static final byte COLOR_ROYAL_BLUE = 0x10;
+    public static final byte COLOR_BABY_BLUE = 0x20;
+    public static final byte COLOR_AQUA = 0x30;
+    public static final byte COLOR_MINT = 0x40;
+    public static final byte COLOR_SEAFOAM_GREEN = 0x50;
+    public static final byte COLOR_GREEN = 0x60;
+    public static final byte COLOR_LIME_GREEN = 0x70;
+    public static final byte COLOR_YELLOW = 0x80 - 0xFF;
+    public static final byte COLOR_YELLOW_ORANGE = 0x90 - 0xFF;
+    public static final byte COLOR_ORANGE = 0xA0 - 0xFF;
+    public static final byte COLOR_RED = 0xB0 - 0xFF;
+    public static final byte COLOR_PINK = 0xC0 - 0xFF;
+    public static final byte COLOR_FUSIA = 0xD0 - 0xFF;
+    public static final byte COLOR_LILAC = 0xE0 - 0xFF;
+    public static final byte COLOR_LAVENDAR = 0xF0 - 0xFF;
+
     // Global commands.
     public static final Command SPEED_DOWN = new Command("43 00 55");
     public static final Command SPEED_UP   = new Command("44 00 55");
