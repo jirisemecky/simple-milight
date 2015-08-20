@@ -58,11 +58,4 @@ public class Tester {
             Thread.sleep(50);
         }
     }
-
-    private static void scanAddressses(Command command, int from, int to) throws IOException, InterruptedException {
-        for (int i = from; i <= to; i++) {
-            String address = "192.168.0." + i;
-            command.send(address);
-        }
-    }
 }
