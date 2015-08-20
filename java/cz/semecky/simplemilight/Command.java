@@ -20,14 +20,6 @@ class Command {
     private int delayMs = 100;
 
     /**
-     * Creates command with single instruction containing the provided data.
-     * @param data Space delimited string of hexa-coded bytes of the instruction (typically 4 values).
-     */
-    public Command(String data) {
-        instructions.add(new Instruction(data));
-    }
-
-    /**
      * Creates command from the provided instructions.
      * @param instr List of instructions
      */
