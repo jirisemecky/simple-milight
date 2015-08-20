@@ -46,7 +46,7 @@ public class RGBW {
         }
 
         /** @param colorValue range is 0 to 255 (0x00 to 0xFF). */
-         public Command color(byte colorValue) {
+        public Command color(byte colorValue) {
             return new Command(onInstruction, colorInstruction(colorValue));
         }
     }
@@ -70,9 +70,17 @@ public class RGBW {
     public static final byte COLOR_LAVENDAR = 0xF0 - 0xFF;
 
     // Global commands.
-    public static final Command SPEED_DOWN = new Command("43 00 55");
-    public static final Command SPEED_UP   = new Command("44 00 55");
-    public static final Command DISCO_MODE = new Command("4D 00 55");
+    public static Command discoMode() {
+        return new Command(new Instruction("4D 00 55"));
+    }
+
+    public static Command speedUp() {
+        return new Command(new Instruction("44 00 55"));
+    }
+
+    public static Command speedDown() {
+        return new Command(new Instruction("43 00 55"));
+    }
 
     /** Constant for the ALL zone, setting all zones together. */
     public static final Zone all = Zone.ALL;
