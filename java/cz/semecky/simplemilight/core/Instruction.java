@@ -1,4 +1,4 @@
-package cz.semecky.simplemilight;
+package cz.semecky.simplemilight.core;
 
 import java.io.IOException;
 import java.net.DatagramPacket;

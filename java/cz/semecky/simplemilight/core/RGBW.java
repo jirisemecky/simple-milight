@@ -1,4 +1,4 @@
-package cz.semecky.simplemilight;
+package cz.semecky.simplemilight.core;
 
 
 /**
@@ -11,7 +11,7 @@ public class RGBW {
     private static final int PAUSE_DELAY_MS = 200;
 
     // Zone commands are returned by the methods of the enum.
-    enum Zone {
+    public enum Zone {
         ALL   (new Instruction("42 00 55"), new Instruction("41 00 55"), new Instruction("C2 00 55")),
         ZONE_1(new Instruction("45 00 55"), new Instruction("46 00 55"), new Instruction("C5 00 55")),
         ZONE_2(new Instruction("47 00 55"), new Instruction("48 00 55"), new Instruction("C7 00 55")),

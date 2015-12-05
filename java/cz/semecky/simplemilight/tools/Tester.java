@@ -1,4 +1,6 @@
-package cz.semecky.simplemilight;
+package cz.semecky.simplemilight.tools;
+
+import cz.semecky.simplemilight.core.RGBW;
 
 import java.io.IOException;
 

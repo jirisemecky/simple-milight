@@ -1,4 +1,4 @@
-package cz.semecky.simplemilight;
+package cz.semecky.simplemilight.core;
 
 import java.io.IOException;
 import java.net.InetAddress;
@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author Jiri Semecky (jiri.semecky@gmail.com)
  */
-class Command {
+public class Command {
 
     private static final int DEFAULT_PORT = 8899;
 
