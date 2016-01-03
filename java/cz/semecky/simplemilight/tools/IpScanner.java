@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class IpScanner {
 
     public static final String BASE_IP = "192.168.0.";
-    public static final RGBW.Zone ZONE = RGBW.all;
+    public static final RGBW.Zone ZONE = RGBW.ZONE_4;
     public static final int FROM_IP = 0;
     public static final int TO_IP = 255;
 

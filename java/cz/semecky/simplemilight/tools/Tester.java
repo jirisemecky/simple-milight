@@ -19,7 +19,6 @@ public class Tester {
         reset();
         disco();
         reset();
-//        scanAddressses(RGBW.all.off(), 102, 102);
     }
 
     private static void disco() throws IOException, InterruptedException {
@@ -31,13 +30,13 @@ public class Tester {
     }
 
     private static void reset() throws IOException, InterruptedException {
-        RGBW.all.on().send(ADDRESS);
-        RGBW.all.white().send(ADDRESS);
+        RGBW.ALL.on().send(ADDRESS);
+        RGBW.ALL.white().send(ADDRESS);
         RGBW.pause();
     }
 
     private static void cycleColors() throws InterruptedException, IOException {
-        RGBW.Zone.ZONE_1.on().send(ADDRESS);
+        RGBW.ZONE_1.on().send(ADDRESS);
         for (byte i = -128; i < 127; i++) {
             System.out.println("COLOR: " + i);
             RGBW.zone(1).color(i).send(ADDRESS);

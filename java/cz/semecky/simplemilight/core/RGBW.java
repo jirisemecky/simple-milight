@@ -11,18 +11,13 @@ public class RGBW {
     private static final int PAUSE_DELAY_MS = 200;
 
     // Zone commands are returned by the methods of the enum.
-    public enum Zone {
-        ALL   (new Instruction("42 00 55"), new Instruction("41 00 55"), new Instruction("C2 00 55")),
-        ZONE_1(new Instruction("45 00 55"), new Instruction("46 00 55"), new Instruction("C5 00 55")),
-        ZONE_2(new Instruction("47 00 55"), new Instruction("48 00 55"), new Instruction("C7 00 55")),
-        ZONE_3(new Instruction("49 00 55"), new Instruction("4A 00 55"), new Instruction("C9 00 55")),
-        ZONE_4(new Instruction("4B 00 55"), new Instruction("4C 00 55"), new Instruction("CB 00 55"));
+    public static class Zone {
 
         private Instruction onInstruction;
         private Instruction offInstruction;
         private Instruction whiteInstruction;
 
-        Zone(Instruction onInstruction, Instruction offInstruction, Instruction whiteInstruction) {
+        private Zone(Instruction onInstruction, Instruction offInstruction, Instruction whiteInstruction) {
             this.onInstruction = onInstruction;
             this.offInstruction = offInstruction;
             this.whiteInstruction = whiteInstruction;
@@ -50,6 +45,13 @@ public class RGBW {
             return new Command(onInstruction, colorInstruction(colorValue));
         }
     }
+
+    /** Constant for the ALL zone, setting all zones together. */
+    public static final Zone ALL    = new Zone(new Instruction("42 00 55"), new Instruction("41 00 55"), new Instruction("C2 00 55"));
+    public static final Zone ZONE_1 = new Zone(new Instruction("45 00 55"), new Instruction("46 00 55"), new Instruction("C5 00 55"));
+    public static final Zone ZONE_2 = new Zone(new Instruction("47 00 55"), new Instruction("48 00 55"), new Instruction("C7 00 55"));
+    public static final Zone ZONE_3 = new Zone(new Instruction("49 00 55"), new Instruction("4A 00 55"), new Instruction("C9 00 55"));
+    public static final Zone ZONE_4 = new Zone(new Instruction("4B 00 55"), new Instruction("4C 00 55"), new Instruction("CB 00 55"));
 
     // Color constants.
     public static final byte COLOR_VIOLET = 0x00;
@@ -82,16 +84,13 @@ public class RGBW {
         return new Command(new Instruction("43 00 55"));
     }
 
-    /** Constant for the ALL zone, setting all zones together. */
-    public static final Zone all = Zone.ALL;
-
     /** Method returning context of zone 1 through 4. */
     public static final Zone zone(int zoneNumber) {
         switch (zoneNumber) {
-            case 1: return Zone.ZONE_1;
-            case 2: return Zone.ZONE_2;
-            case 3: return Zone.ZONE_3;
-            case 4: return Zone.ZONE_4;
+            case 1: return ZONE_1;
+            case 2: return ZONE_2;
+            case 3: return ZONE_3;
+            case 4: return ZONE_4;
             default: throw new IllegalArgumentException("Allowed zones are only from 1 to 4.");
         }
     }
